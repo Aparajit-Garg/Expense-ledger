@@ -1,0 +1,40 @@
+.main {
+    width: 350px;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    margin: auto;
+    transform: translateY(50%);
+}
+
+.formWrapper {
+    background: rgba(255, 255, 255, 0.2);
+    /* Translucent effect */
+    backdrop-filter: blur(10px);
+    /* Blurry glass effect */
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: auto;
+    transform: translateY(30%);
+}
+
+.newSection {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.registerBtn {
+    background-color: white;
+    padding: 6px;
+    border-radius: 12px;
+    opacity: 1;
+}
