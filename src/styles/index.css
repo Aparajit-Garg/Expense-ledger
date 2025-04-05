@@ -5,14 +5,26 @@
 }
 
 body {
+  position: relative;
+  margin: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  /* Optional: prevents scrollbars */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/src/assets/background.jpg');
   background-size: cover;
-  /* Ensures the image covers the entire background */
   background-position: center;
-  /* Centers the image */
   background-repeat: no-repeat;
-  /* Prevents tiling */
-  opacity: 0.7;
+  opacity: 0.9;
+  z-index: -1;
+  /* Sends it behind the body content */
 }

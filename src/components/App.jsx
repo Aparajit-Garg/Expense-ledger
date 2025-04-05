@@ -8,15 +8,23 @@ const App = () => {
   return (
     <div className={style.main}>
       <div className={style.formWrapper}>
-        <div>
+        <div className={style.heading}>
           <div> Hi there </div>
           <div> Welcome to expense ledger </div>
         </div>
-        <Login />
-        {toRegister && <Register />}
+        <Login toRegister={toRegister} />
         <div className={style.newSection}>
-          <span> New to the ledger? </span>
-          <button className={style.registerBtn}> Register </button>
+          {toRegister ?
+            <>
+              <span> Already have an account? </span>
+              <button className={style.registerBtn} onClick={() => setToRegister(false)}> Sign in </button>
+            </>
+            :
+            <>
+              <span> New to the ledger? </span>
+              <button className={style.registerBtn} onClick={() => setToRegister(true)}> Register </button>
+            </>
+          }
         </div>
       </div>
     </div>
